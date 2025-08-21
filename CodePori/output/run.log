@@ -1,54 +1,15 @@
-[2025-08-20 16:35:28] Starting CodePori (Proxy/Gemini) pipeline...
-[2025-08-20 16:35:28] Proxy base: http://localhost:8000
-[2025-08-20 16:35:28] Primary model: models/gemini-2.5-pro | Fallback: models/gemini-2.5-flash
-[2025-08-20 16:35:28] Proxy health: status=healthy valid_keys=352 cooldown=0 exhausted={'gemini-1.5-flash': 0, 'gemini-1.5-flash-latest': 0, 'gemini-2.5-flash': 11, 'gemini-2.5-flash-lite': 0, 'gemini-2.5-flash-preview-05-20': 1, 'gemini-2.5-pro': 33}
-[2025-08-20 16:36:11] === RAW PLAN RESPONSE ===
-[2025-08-20 16:36:11] {
-  "architecture": [
-    "A decoupled, pipeline-based architecture is the core of this driver. The system will be orchestrated by a central `Pipeline` class.",
-    "Each step in the process (plan, generate, etc.) will be implemented as a distinct `PipelineStage` class, inheriting from a common abstract base class. This promotes the Single Responsibility and Open/Closed principles, allowing new stages to be added without modifying the core pipeline.",
-    "A `PipelineContext` data object will be passed through each stage. This object will carry the state of the generation process (e.g., initial prompt, generated plan, code files, lint results, test failures), ensuring that stages are stateless and loosely coupled.",
-    "External dependencies such as the Large Language Model (LLM), file system operations, and execution of shell commands (for linting/testing) will be abstracted behind dedicated wrapper classes (`LLMClient`, `FileSystemManager`, `ProcessRunner`). This adheres to the Dependency Inversion principle and simplifies mocking for robust unit testing.",
-    "Configuration will be managed via a `Config` class that loads settings from a YAML file, separating configuration from
-... (truncated)
-[2025-08-20 16:36:11] === END RAW PLAN ===
-[2025-08-20 16:36:11] === PARSED PLAN ===
-[2025-08-20 16:36:11] {
-  "architecture": [
-    "A decoupled, pipeline-based architecture is the core of this driver. The system will be orchestrated by a central `Pipeline` class.",
-    "Each step in the process (plan, generate, etc.) will be implemented as a distinct `PipelineStage` class, inheriting from a common abstract base class. This promotes the Single Responsibility and Open/Closed principles, allowing new stages to be added without modifying the core pipeline.",
-    "A `PipelineContext` data object will be passed through each stage. This object will carry the state of the generation process (e.g., initial prompt, generated plan, code files, lint results, test failures), ensuring that stages are stateless and loosely coupled.",
-    "External dependencies such as the Large Language Model (LLM), file system operations, and execution of shell commands (for linting/testing) will be abstracted behind dedicated wrapper classes (`LLMClient`, `FileSystemManager`, `ProcessRunner`). This adheres to the Dependency Inversion principle and simplifies mocking for robust unit testing.",
-    "Configuration will be managed via a `Config` class that loads settings from a YAML file, separating configuration from
-[2025-08-20 16:36:11] === END PARSED PLAN ===
-[2025-08-20 16:36:11] Generated plan.
-[2025-08-20 16:36:11] Generating 16 code files and 6 test files
-[2025-08-20 16:36:11] Generating code file 1/16: src/codepori/main.py
-[2025-08-20 16:37:03] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/main.py
-[2025-08-20 16:37:03] Generating code file 2/16: src/codepori/pipeline.py
-[2025-08-20 16:50:36] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/pipeline.py
-[2025-08-20 16:50:36] Generating code file 3/16: src/codepori/context.py
-[2025-08-20 16:51:42] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/context.py
-[2025-08-20 16:51:42] Generating code file 4/16: src/codepori/stages/base.py
-[2025-08-20 16:52:29] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/base.py
-[2025-08-20 16:52:29] Generating code file 5/16: src/codepori/stages/plan.py
-[2025-08-20 16:53:12] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/plan.py
-[2025-08-20 16:53:12] Generating code file 6/16: src/codepori/stages/generate.py
-[2025-08-20 16:54:08] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/generate.py
-[2025-08-20 16:54:08] Generating code file 7/16: src/codepori/stages/repair.py
-[2025-08-20 16:54:51] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/repair.py
-[2025-08-20 16:54:51] Generating code file 8/16: src/codepori/stages/lint.py
-[2025-08-20 16:56:16] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/lint.py
-[2025-08-20 16:56:16] Generating code file 9/16: src/codepori/stages/test.py
-[2025-08-20 16:57:19] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/test.py
-[2025-08-20 16:57:19] Generating code file 10/16: src/codepori/stages/finalize.py
-[2025-08-20 16:57:55] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/stages/finalize.py
-[2025-08-20 16:57:55] Generating code file 11/16: src/codepori/llm/client.py
-[2025-08-20 16:58:41] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/llm/client.py
-[2025-08-20 16:58:41] Generating code file 12/16: src/codepori/utils/config.py
-[2025-08-20 16:59:32] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/utils/config.py
-[2025-08-20 16:59:32] Generating code file 13/16: src/codepori/utils/fs_manager.py
-[2025-08-20 17:00:17]   -> JSON invalid (failed to parse dict JSON (Expecting ',' delimiter: line 3 column 3247 (char 3272))); re-prompt (1/6)
-[2025-08-20 17:00:53] WROTE /Users/williamwhite/CodePori/output/code/src/codepori/utils/fs_manager.py
-[2025-08-20 17:00:53] Generating code file 14/16: src/codepori/utils/process.py
-[2025-08-20 17:01:45]   -> JSON invalid (parsed JSON but best candidate has empty code (all candidates empty)); re-prompt (1/6)
+[2025-08-21 23:04:27] Starting CodePori (Proxy/Gemini) pipeline...
+[2025-08-21 23:04:27] Proxy base: http://localhost:8000
+[2025-08-21 23:04:27] Primary model: models/gemini-2.5-pro | Fallback: models/gemini-2.5-flash
+[2025-08-21 23:04:27] Warning: could not reach proxy /health: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f77711de930>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-21 23:04:27] Model models/gemini-2.5-pro exception: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /v1beta/models/models/gemini-2.5-pro:generateContent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f77711df500>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-21 23:04:27] Model models/gemini-2.5-flash exception: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /v1beta/models/models/gemini-2.5-flash:generateContent (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f77711df860>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-08-21 23:04:27] FATAL: plan: empty response
+Traceback (most recent call last):
+  File "/home/runner/work/codepori2/codepori2/CodePori/main.py", line 1186, in main
+    plan = step_plan(llm)
+           ^^^^^^^^^^^^^^
+  File "/home/runner/work/codepori2/codepori2/CodePori/main.py", line 356, in step_plan
+    raise RuntimeError("plan: empty response")
+RuntimeError: plan: empty response
+
