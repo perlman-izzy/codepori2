@@ -17,9 +17,9 @@ REPO: https://github.com/perlman-izzy/codepori2 (public)
 - [x] none (infer packages from imports)
 
 ## TEST COMMANDS (write exact commands; I'll wire them):
-- Unit tests: `python -m pytest CodePori/output/code/tests/ -v` (if pytest installed)
-- Lint (optional): `python -m flake8 CodePori/ --max-line-length=120` (if flake8 installed)
-- Build (optional): `python -c "import CodePori.main; print('Build OK')"` (syntax check)
+- Unit tests: `python -m pytest CodePori/output/code/tests/ -v`
+- Lint (optional): `python -m flake8 CodePori/main.py --max-line-length=120 --count`  
+- Build (optional): `python -c "import ast; ast.parse(open('CodePori/main.py').read()); print('Build OK')"`
 
 ## ENTRY/SMOKE (short, non-blocking check):
 - Python: `python -c "import sys; sys.path.insert(0, 'CodePori'); import main; print('SMOKE')"`
