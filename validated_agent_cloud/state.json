@@ -14,9 +14,9 @@
       }
     }
   ],
-  "iteration": 6,
+  "iteration": 7,
   "latest_observation": {
-    "evidence_id": "iter-6-executor-protocol",
+    "evidence_id": "iter-7-executor-protocol",
     "kind": "executor_protocol_failure",
     "text": "Executor protocol failure: ValueError: executor did not return a JSON object"
   },

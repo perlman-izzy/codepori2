@@ -1,8 +1,8 @@
 # Cloud Autowork Heartbeat
 
-- iteration: 6
+- iteration: 7
 - status: REJECTED
-- last model: mimo-v2.5-free
+- last model: hy3-free
 - last decision: REJECT
 - force epistemic reset: False
-- latest evidence: iter-6-executor-protocol
+- latest evidence: iter-7-executor-protocol

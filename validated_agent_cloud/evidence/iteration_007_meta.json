@@ -1,0 +1,7 @@
+{
+  "decision": "REJECT",
+  "executor_sha256": "a296abac75b136e234b97caeafa5b8f318d5b85eed8407e2e309e723b34b0e9e",
+  "iteration": 7,
+  "model": "hy3-free",
+  "tests_sha256": "9e7097886c7fb2f6ad0fafe6b943434afff052a64840f10f78b5f213c803e705"
+}

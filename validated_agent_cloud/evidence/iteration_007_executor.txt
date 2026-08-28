@@ -1,0 +1,5 @@
+{
+  "hypothesis_id": "reemit",
+  "hypothesis": "The current workspace implementation already satisfies all protected tests; the only prior failure was a protocol error (no valid JSON emitted). Re-emitting the complete, correct core.py and __init__.py will allow the harness to run and pass all frozen tests.",
+  "predicted_observation": "All 8 protected tests across DurableEpistemicStateTests, VerifierAuthorityTests, and ImmutableEvidenceTests pass, confirming separation of state types, two-rejection epistemic reset, narrative-free reset payload, closed verifier vocabulary, ACCEPT-only checkpoint advancement, and immutable evidence hashing.",
+  "alternatives": ["The empty validated_agent_cloud
