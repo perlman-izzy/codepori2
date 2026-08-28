@@ -14,11 +14,11 @@
       }
     }
   ],
-  "iteration": 7,
+  "iteration": 8,
   "latest_observation": {
-    "evidence_id": "iter-7-executor-protocol",
+    "evidence_id": "iter-8-executor-protocol",
     "kind": "executor_protocol_failure",
-    "text": "Executor protocol failure: ValueError: executor did not return a JSON object"
+    "text": "Executor protocol failure: ValueError: missing hypothesis"
   },
   "rejection_counts": {
     "the current implementation already correctly implements all required semantics and should pass the protected tests without modification": 1,
