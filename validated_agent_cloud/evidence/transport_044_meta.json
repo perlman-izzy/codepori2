@@ -1,0 +1,8 @@
+{
+  "decision": "INCONCLUSIVE",
+  "executor_sha256": "7c53c2c3f78a498ae1348db073c338b006d96a579a65f01bc0597e94607cf832",
+  "kind": "executor_protocol_failure",
+  "model": "nemotron-3-ultra-free",
+  "observation_sha256": "dc0734c340b7c74592f63591e8a13f7298bcde12f46d352651b0ce5dea3874ba",
+  "transport_attempt": 44
+}
