@@ -1,0 +1,7 @@
+{
+  "decision": "REJECT",
+  "executor_sha256": "d5181f28e799d8918c8d65982dbb945ac1564d428d4d92d6fa71027e631d2609",
+  "iteration": 1,
+  "model": "mimo-v2.5-free",
+  "tests_sha256": "af78a04e5b2529cfcfaf3cd6acabdc62312520a8887a32a1a04c26f0d7ed0819"
+}
