@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import sys
+import urllib.error
 import urllib.request
 
 URL = "https://opencode.ai/zen/v1/chat/completions"
@@ -20,6 +21,11 @@ try:
     with urllib.request.urlopen(req, timeout=90) as r:
         raw = r.read().decode("utf-8", errors="replace")
         print(f"HTTP {r.status}")
+except urllib.error.HTTPError as exc:
+    body = exc.read().decode("utf-8", errors="replace")
+    print(f"REQUEST_FAILED: HTTP {exc.code} {exc.reason}", file=sys.stderr)
+    print("ERROR_BODY:", body[:4000], file=sys.stderr)
+    raise
 except Exception as exc:
     print(f"REQUEST_FAILED: {type(exc).__name__}: {exc}", file=sys.stderr)
     raise
