@@ -1,0 +1,23 @@
+test_core (unittest.loader._FailedTest.test_core) ... ERROR
+
+======================================================================
+ERROR: test_core (unittest.loader._FailedTest.test_core)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_core
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/unittest/loader.py", line 394, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/unittest/loader.py", line 337, in _get_module_from_name
+    __import__(name)
+  File "/home/runner/work/codepori2/codepori2/validated_agent_cloud/frozen_tests/test_core.py", line 4, in <module>
+    from validated_agent_cloud.workspace.core import (
+  File "/home/runner/work/codepori2/codepori2/validated_agent_cloud/workspace/__init__.py", line 1, in <module>
+    from .core import (
+ModuleNotFoundError: No module named 'validated_agent_cloud.workspace.core'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
