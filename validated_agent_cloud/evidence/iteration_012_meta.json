@@ -1,0 +1,7 @@
+{
+  "decision": "REJECT",
+  "executor_sha256": "5041e9d5965fba19d9ed3e4c096b38ce2c2a1796b8ec6806be41c3a6d1a165f2",
+  "iteration": 12,
+  "model": "nemotron-3-ultra-free",
+  "tests_sha256": "b2b1a3f47e7bf8aa79b5264a3efbb3f24b4ae4842bc5a383ae7a80429842b3b0"
+}
