@@ -1,0 +1,10 @@
+{
+  "action": "Preserve iteration-1 REJECT and immutable evidence; remove only its derived causal-hypothesis retry count and clarify/normalize the path contract in v2.",
+  "classification": "HARNESS_INTERFACE_FAILURE",
+  "correction_id": "infra-correction-v2-path-contract-iter1",
+  "finding": "Executor identified the missing core module and supplied a plausible implementation, but v1's ambiguous relative-path contract caused a duplicated workspace prefix.",
+  "preserved_primary_evidence": "iter-1-protected-tests",
+  "previous_rejection_counts": {
+    "the test failures are caused by missing validated agent cloud workspace core module creating this module with the required functions and constants will allow": 1
+  }
+}
