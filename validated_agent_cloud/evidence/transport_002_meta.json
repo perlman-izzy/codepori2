@@ -1,0 +1,8 @@
+{
+  "decision": "INCONCLUSIVE",
+  "executor_sha256": "a642cdcd0f5cab082d4f0b42ea5fc2df76fbf106e392762b1b7071e0bc851493",
+  "kind": "executor_protocol_failure",
+  "model": "none",
+  "observation_sha256": "03715c1046e27796c1c54d793b3ec0c15a56af283cd31b0837c3b6c35cb20740",
+  "transport_attempt": 2
+}
