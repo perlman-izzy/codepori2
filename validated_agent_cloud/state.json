@@ -14,11 +14,11 @@
       }
     }
   ],
-  "iteration": 3,
+  "iteration": 4,
   "latest_observation": {
-    "evidence_id": "iter-3-executor-protocol",
+    "evidence_id": "iter-4-executor-protocol",
     "kind": "executor_protocol_failure",
-    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: mimo-v2.5-free: empty response | hy3-free: empty response | nemotron-3.5-lightning-free: TimeoutError: The read operation timed out | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
+    "text": "Executor protocol failure: ValueError: executor returned no actions"
   },
   "rejection_counts": {
     "the test cannot import core because init py doesn t expose the core module adding an import in init py will make the module": 1
