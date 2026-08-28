@@ -1,0 +1,10 @@
+{
+  "hypothesis_id": "missing-package-init",
+  "hypothesis": "The validated_agent_cloud package lacks an __init__.py file, causing Python to not recognize it as a package, which breaks imports of validated_agent_cloud.workspace.core",
+  "predicted_observation": "After adding validated_agent_cloud/__init__.py, the protected tests will import successfully and run",
+  "alternatives": ["core.py has syntax errors preventing import", "Python path doesn't include the project root"],
+  "summary": "Add __init__.py to validated_agent_cloud package root to enable proper package imports",
+  "actions": [
+    {"type": "write_file", "path": "../__init__.py", "content": ""}
+  ]
+}
