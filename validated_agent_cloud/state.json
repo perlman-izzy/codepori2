@@ -14,11 +14,11 @@
       }
     }
   ],
-  "iteration": 15,
+  "iteration": 16,
   "latest_observation": {
-    "evidence_id": "iter-15-executor-protocol",
+    "evidence_id": "iter-16-executor-protocol",
     "kind": "executor_protocol_failure",
-    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: mimo-v2.5-free: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | hy3-free: empty response | nemotron-3.5-lightning-free: HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Error from provider (Console): Upstream request failed: [400] Provider returned error\"}} | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
+    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: mimo-v2.5-free: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | hy3-free: empty response | nemotron-3.5-lightning-free: HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Error from provider (Console): Upstream request failed: [404] Provider returned error\"}} | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
   },
   "rejection_counts": {
     "the current implementation already correctly implements all required semantics and should pass the protected tests without modification": 1,
