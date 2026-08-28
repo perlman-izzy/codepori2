@@ -1,0 +1,14 @@
+{
+  "hypothesis_id": "import-fix",
+  "hypothesis": "The test cannot import core because __init__.py doesn't expose the core module. Adding an import in __init__.py will make the module accessible.",
+  "predicted_observation": "Tests will be able to import from validated_agent_cloud.workspace.core and run successfully.",
+  "alternatives": ["The test import path might be wrong, but the test is protected and cannot be changed"],
+  "summary": "Add import statement to __init__.py to expose the core module",
+  "actions": [
+    {
+      "type": "write_file",
+      "path": "__init__.py",
+      "content": "from .core import (\n    ACCEPT,\n    INCONCLUSIVE,\n    REJECT,\n    VERIFIED_FACT,\n    HYPOTHESIS_STATUS,\n    UNKNOWN_STATUS,\n    FALSIFIED_HYPOTHESIS,\n    apply_verifier_result,\n    build_reset_payload,\n    make_evidence_record,\n    new_state,\n    record_fact,\n    record_hypothesis,\n    record_rejection,\n    record_unknown,\n    verify_evidence_record,\n)\n\n__all__ = [\n    \"ACCEPT\",\n    \"INCONCLUSIVE\",\n    \"REJECT\",\n    \"VERIFIED_FACT\",\n    \"HYPOTHESIS_STATUS\",\n    \"UNKNOWN_STATUS\",\n    \"FALSIFIED_HYPOTHESIS\",\n    \"apply_verifier_result\",\n    \"build_reset_payload\",\n    \"make_evidence_record\",\n    \"new_state\",\n    \"record_fact\",\n    \"record_hypothesis\",\n    \"record_rejection\",\n    \"record_unknown\",\n    \"verify_evidence_record\",\n]\n"
+    }
+  ]
+}
