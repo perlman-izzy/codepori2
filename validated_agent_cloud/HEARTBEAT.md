@@ -1,8 +1,8 @@
 # Cloud Autowork Heartbeat
 
-- iteration: 31
-- status: INCONCLUSIVE
-- last model: none
-- last decision: INCONCLUSIVE
+- iteration: 32
+- status: REJECTED
+- last model: nemotron-3-ultra-free
+- last decision: REJECT
 - force epistemic reset: False
-- latest evidence: transport-20-executor-protocol
+- latest evidence: iter-32-protected-tests
