@@ -1,0 +1,11 @@
+{
+  "hypothesis_id": "h1",
+  "hypothesis": "The existing core.py implementation already satisfies all protected test requirements: separate epistemic statuses, two-rejection epistemic reset with evidence preservation, reset payload excluding executor narrative/reasoning, closed verifier decision vocabulary, and immutable evidence records with hash+provenance.",
+  "predicted_observation": "All protected tests in validated_agent_cloud/frozen_tests/test_core.py pass (7 tests across DurableEpistemicStateTests, VerifierAuthorityTests, ImmutableEvidenceTests).",
+  "alternatives": [],
+  "summary": "Re-affirm the correct implementation by writing core.py and __init__.py (package re-exports) with content that already conforms to the objective, ensuring the harness finds the required symbols and behavior.",
+  "actions": [
+    {
+      "type": "write_file",
+      "path": "core.py",
+      "content": "import hashlib\nfrom typing import Dict, Any, List, Optional\n\n# Verifier decision constants\nACCEPT = \"ACCEPT\"\nREJECT = \"REJECT\"\nINCONCLUSIVE = \"INCONCLUSIVE\"\n\n# Status constants\nVERIFIED_FACT = \"VERIFIED_FACT\"\nHYPOTHESIS_STATUS = \"HYPOTHESIS\"\nUNKNOWN_STATUS = \"UNKNOWN\"\nFALSIFIED_HYPOTHESIS = \"FALSIFIED_HYPOTHESIS\"\n\n\ndef new_state(job_id: str, objective: str) -> Dict[str, Any]:\n    \"\"\"Create a new epistemic state for a job.\"\"\"\n    return {\n        \"job_id\": job_id,\n        \"objective\": objective,\n        \"verified_f
