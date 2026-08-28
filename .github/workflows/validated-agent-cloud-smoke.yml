@@ -29,8 +29,8 @@ jobs:
           set -euo pipefail
           test "$GITHUB_REF_NAME" = "validated-agent-cloud-20260827"
           test "$(git branch --show-current)" = "validated-agent-cloud-20260827"
-      - name: Run bounded five-minute autonomous loop v2
+      - name: Run bounded five-minute autonomous loop v3
         env:
           AUTOWORK_MAX_ITERATIONS: '50'
           AUTOWORK_SLEEP_SECONDS: '300'
-        run: python3 validated_agent_cloud/autowork_v2.py
+        run: python3 validated_agent_cloud/autowork_v3.py
