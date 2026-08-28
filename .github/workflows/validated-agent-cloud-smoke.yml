@@ -1,4 +1,4 @@
-name: Validated Agent Cloud Smoke
+name: Validated Agent Cloud Autowork
 
 on:
   push:
@@ -7,31 +7,32 @@ on:
     paths:
       - 'validated_agent_cloud/**'
       - '.github/workflows/validated-agent-cloud-smoke.yml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'validated_agent_cloud/**'
-      - '.github/workflows/validated-agent-cloud-smoke.yml'
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: validated-agent-cloud-autowork
+  cancel-in-progress: true
 
 jobs:
-  smoke:
+  autowork:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
-      - name: Verify isolated head
+        with:
+          fetch-depth: 0
+      - name: Verify isolated branch
         shell: bash
         run: |
           set -euo pipefail
-          echo "event=$GITHUB_EVENT_NAME ref=$GITHUB_REF head=${GITHUB_HEAD_REF:-}"
-          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
-            test "$GITHUB_HEAD_REF" = "validated-agent-cloud-20260827"
-          else
-            test "$GITHUB_REF_NAME" = "validated-agent-cloud-20260827"
-          fi
-      - name: Credential-free model smoke
+          test "$GITHUB_REF_NAME" = "validated-agent-cloud-20260827"
+          test "$(git branch --show-current)" = "validated-agent-cloud-20260827"
+      - name: Verify credential-free model route
         run: python3 validated_agent_cloud/free_model_smoke.py
+      - name: Run bounded five-minute autonomous loop
+        env:
+          AUTOWORK_MAX_ITERATIONS: '50'
+          AUTOWORK_SLEEP_SECONDS: '300'
+        run: python3 validated_agent_cloud/autowork.py
