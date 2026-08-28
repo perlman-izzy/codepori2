@@ -14,11 +14,11 @@
       }
     }
   ],
-  "iteration": 20,
+  "iteration": 21,
   "latest_observation": {
-    "evidence_id": "iter-20-executor-protocol",
+    "evidence_id": "iter-21-executor-protocol",
     "kind": "executor_protocol_failure",
-    "text": "Executor protocol failure: ValueError: executor returned no actions"
+    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: mimo-v2.5-free: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | hy3-free: empty response | nemotron-3.5-lightning-free: TimeoutError: The read operation timed out | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
   },
   "rejection_counts": {
     "the current implementation already correctly implements all required semantics and should pass the protected tests without modification": 1,
