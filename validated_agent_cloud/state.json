@@ -14,9 +14,9 @@
       }
     }
   ],
-  "iteration": 18,
+  "iteration": 19,
   "latest_observation": {
-    "evidence_id": "iter-18-executor-protocol",
+    "evidence_id": "iter-19-executor-protocol",
     "kind": "executor_protocol_failure",
     "text": "Executor protocol failure: ValueError: executor returned no actions"
   },
