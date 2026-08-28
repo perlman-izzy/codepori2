@@ -1,0 +1,8 @@
+{
+  "hypothesis_id": "impl-complete",
+  "hypothesis": "The current implementation in core.py already satisfies all protected test requirements for durable epistemic state, verifier authority, immutable evidence, and epistemic reset semantics.",
+  "predicted_observation": "All protected tests in validated_agent_cloud/frozen_tests/test_core.py will pass when run against the existing workspace/core.py implementation.",
+  "alternatives": ["Some edge case in record_rejection or build_reset_payload may not match test expectations exactly"],
+  "summary": "No code changes needed; the implementation appears complete and correct per the protected test specifications.",
+  "actions": []
+}
