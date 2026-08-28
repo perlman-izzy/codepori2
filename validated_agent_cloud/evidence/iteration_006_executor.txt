@@ -1,0 +1,6 @@
+{
+  "hypothesis_id": "missing-core-module",
+  "hypothesis": "The test fails because the module import path is incorrect or the core module is missing from the workspace directory structure",
+  "predicted_observation": "The protected tests should pass after ensuring the correct module structure exists",
+  "alternatives": ["The __init__.py imports are broken", "The package structure is incorrectly nested"],
+  "summary": "The error shows the test cannot import from
