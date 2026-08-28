@@ -18,9 +18,9 @@
   "iteration": 30,
   "latest_observation": {
     "decision": "INCONCLUSIVE",
-    "evidence_id": "transport-3-executor-protocol",
+    "evidence_id": "transport-4-executor-protocol",
     "kind": "executor_protocol_failure",
-    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: big-pickle: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | ox-alpha-free: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ox-alpha-free is not supported\"}} | mimo-v2.5-free: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | hy3-free: empty response | nemotron-3.5-lightning-free: HTTP 400: {\"error\":{\"type\":\"server_error\",\"message\":\"Error from provider (Console): Upstream request failed: [400] Provider returned error\"}} | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
+    "text": "Executor protocol failure: RuntimeError: bounded free-provider pool exhausted: big-pickle: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | ox-alpha-free: HTTP 401: {\"type\":\"error\",\"error\":{\"type\":\"ModelError\",\"message\":\"Model ox-alpha-free is not supported\"}} | mimo-v2.5-free: HTTP 429: {\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Error from provider (Console): Rate limit exceeded. Please try again later.\"}} | hy3-free: empty response | nemotron-3.5-lightning-free: TimeoutError: The read operation timed out | nemotron-3-ultra-free: TimeoutError: The read operation timed out"
   },
   "rejection_counts": {
     "the current implementation already correctly implements all required semantics and should pass the protected tests without modification": 1,
@@ -30,6 +30,6 @@
   "schema_version": 1,
   "semantic_iterations_v5": 1,
   "status": "INCONCLUSIVE",
-  "transport_attempt": 3,
+  "transport_attempt": 4,
   "verified_facts": []
 }
