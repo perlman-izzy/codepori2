@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "BOOTSTRAP",
+  "iteration": 0,
+  "verified_facts": [],
+  "falsified_hypotheses": [],
+  "rejection_counts": {},
+  "latest_observation": null,
+  "accepted_checkpoint": null,
+  "force_epistemic_reset": false
+}
